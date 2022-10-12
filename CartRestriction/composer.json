@@ -1,0 +1,14 @@
+{
+    "name": "practice/cartrestriction",
+    "description": "Practice Cart Restriction Module",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Practice\\Shipping\\": ""
+        }
+    }
+}
