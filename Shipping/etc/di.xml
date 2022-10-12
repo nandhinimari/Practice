@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Practice
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Quote\Model\Quote\Address\RateCollectorInterface">
+        <plugin name="Practice_ShippingRestrictions_customProductTypeRestrictionPlugin"
+                type="Practice\Shipping\Plugin\Model\Quote\Address\RateCollector\CustomProductTypeRestrictionPlugin"/>
+    </type>
+    <type name="Magento\Quote\Api\ShipmentEstimationInterface">
+        <plugin name="Practice_ShippingRestrictions_ShippingMethodRestrictionPlugin"
+                type="Practice\Shipping\Plugin\ShippingMethodRestrictionPlugin"/>
+    </type>
+    <type name="Practice\Shipping\Plugin\Model\Quote\Address\RateCollector\CustomProductTypeRestrictionPlugin">
+        <arguments>
+            <argument name="checkoutSession" xsi:type="object">Magento\Checkout\Model\Session\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Practice\Shipping\Plugin\ShippingMethodRestrictionPlugin">
+        <arguments>
+            <argument name="checkoutSession" xsi:type="object">Magento\Checkout\Model\Session\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Practice\Shipping\Model\Carrier\Validator">
+        <arguments>
+            <argument name="checkoutSession" xsi:type="object">Magento\Checkout\Model\Session\Proxy</argument>
+        </arguments>
+    </type>
+</config>

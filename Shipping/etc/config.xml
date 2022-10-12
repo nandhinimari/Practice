@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <carriers>
+            <customshipping>
+                <active>1</active>
+                <name>Custom Shipping Method</name>
+                <title>Custom Shipping Method</title>
+                <price>5.00</price>
+                <model>Practice\Shipping\Model\Carrier\CustomShipping</model>
+                <handling_type>F</handling_type>
+            </customshipping>
+        </carriers>
+    </default>
+</config>

@@ -1,0 +1,14 @@
+{
+    "name": "practice/shipping",
+    "description": "Practice Shipping Module",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Practice\\Shipping\\": ""
+        }
+    }
+}
