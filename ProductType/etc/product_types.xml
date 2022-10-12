@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Catalog:etc/product_types.xsd">
+    <type name="custom_product"
+          label="Custom Product Type"
+          modelInstance="Practice\ProductType\Model\Product\Type\CustomProduct"
+          indexPriority="100"
+          sortOrder="100"
+          isQty="true"
+    >
+        <priceModel instance="Practice\ProductType\Model\Product\Type\Price" />
+        <customAttributes>
+            <attribute name="refundable" value="true"/>
+        </customAttributes>
+    </type>
+    <composableTypes>
+        <type name="custom_product" />
+    </composableTypes>
+</config>
